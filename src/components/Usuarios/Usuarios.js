@@ -31,12 +31,25 @@ class Usuarios extends Component {
   componentDidMount(){
 
      fetch('https://reqres.in/api/users')
-     .then(function(resposta){
-       return resposta.text();
-     })
-     .then(function(dados){
-       console.log(dados);
-     })
+     .then(resposta=>resposta.json())
+     .then(dados=>{
+      
+        const usuarios = dados.data.map(usuario=>{
+           
+           return{
+              id: usuario.id,
+              nome: usuario.first_name,
+              sobrenome: usuario.last_name,
+              email: usuario.email 
+           }
+
+        })
+
+       /*atualizando o state */
+
+       this.setState({usuarios});
+
+      })
      
   }
 
