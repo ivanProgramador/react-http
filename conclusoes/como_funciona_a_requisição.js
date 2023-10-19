@@ -85,8 +85,8 @@ componentDidMount(){
 
 
 /*metodo post
-  O metodo post esta sendo ezecutado de de uma funcção chamada
-  onSubmitHandler(event) qu espera o submit acontecer recebe o evento e 
+  O metodo post esta sendo executado apartir de uma função chamada
+  onSubmitHandler(event) que espera o submit acontecer recebe o evento e 
   impede que ele siga para a proxima pagina sem de fato executar o post
 */
 
